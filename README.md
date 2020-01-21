@@ -12,7 +12,7 @@ Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクト�
 * Software setupのStep 5、項目4について  
  プログラムはJetBot Mega用の物を使用する必要があるため、gitのコマンドを下記のように修正してください。
  ```
- $ git clone https://github.com/vstoneofficial/jetbot-mega
+ $ git clone https://github.com/vstoneofficial/jetbot-mega.git
  ```
 * Software setupのStep 5、項目5について  
  rsyncコマンドは、下記のようにrオプションを追加して実行してください。
