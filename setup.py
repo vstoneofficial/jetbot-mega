@@ -5,8 +5,8 @@ from setuptools import setup, find_packages, Extension
 
 
 def make_rule():
-    path = '/etc/udev/rules.d/99-jetbot-mega.rules'
-    rule = 'KERNEL=="ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", MODE="0666", SYMLINK+="ttyUSB_MegaRover"'
+    path = '/etc/udev/rules.d/99-jetbot-rover.rules'
+    rule = 'KERNEL=="ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", MODE="0666", SYMLINK+="ttyUSB_Rover"'
 
     isRule = False
 

@@ -2,7 +2,7 @@ import  serial
 import  struct
 
 class MegaRover_DCMotor:
-    #å„ãƒ¢ãƒ¼ã‚¿ã®ç›®æ¨™é€Ÿåº¦æ ¼ç´ãƒ¡ãƒ¢ãƒªã®ã‚¢ãƒ‰ãƒ¬ã‚¹
+    #Šeƒ‚[ƒ^‚Ì–Ú•W‘¬“xŠi”[ƒƒ‚ƒŠ‚ÌƒAƒhƒŒƒX
     LEFT_MOTOR = 'AC'
     RIGHT_MOTOR = 'AE'
 
@@ -25,7 +25,7 @@ class MegaRover_DCMotor:
         self.ser.write(cmd.encode('utf-8'))
 
     def int2litteEndian(self,speed):
-        #ãƒªãƒˆãƒ«ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³(2ãƒã‚¤ãƒˆ)ã«å¤‰æ›
+        #ƒŠƒgƒ‹ƒGƒ“ƒfƒBƒAƒ“(2ƒoƒCƒg)‚É•ÏŠ·
         speed_bin = struct.pack('<h',speed)
         return speed_bin.hex()
 
@@ -33,11 +33,11 @@ class MegaRover_DCMotor:
 class MegaRover_MotorDriver:
     WRC_GAIN_ADDR = '20'
 
-    def __init__(self, addr='/dev/ttyUSB_MegaRover', baud=115200, waitLimit=0.1, *args):
+    def __init__(self, addr='/dev/ttyUSB_Rover', baud=115200, waitLimit=0.1, *args):
         try:
             self.ser = serial.Serial(addr,baud,timeout=waitLimit)
             self.motors = [MegaRover_DCMotor(self.ser, m) for m in range(2)]
-            #é€Ÿåº¦ã®æ¯”ä¾‹ã‚²ã‚¤ãƒ³ã‚’0ã«ï¼ˆ0ä»¥å¤–ã®å ´åˆã€ã‚·ãƒªã‚¢ãƒ«ã§æ“ä½œãŒã§ããªã„ï¼‰
+            #‘¬“x‚Ì”ä—áƒQƒCƒ“‚ğ0‚Éi0ˆÈŠO‚Ìê‡AƒVƒŠƒAƒ‹‚Å‘€ì‚ª‚Å‚«‚È‚¢j
             start_cmd = 'w10 ' + self.WRC_GAIN_ADDR + ' 00000000\n'
             self.ser.write(start_cmd.encode('utf-8'))
         except FileNotFoundError as e:
