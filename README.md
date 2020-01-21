@@ -1,20 +1,26 @@
-# JetBot
+# JetBot Mega
 
-<!--[<img src="https://img.shields.io/discord/553852754058280961.svg">](https://discord.gg/Ady6NtF) -->
+Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクトです。  
+基本的な使用方法は通常のJetBotと同様ですが、ドライバー等のプログラムがVS-WRC021仕様になっています。  
 
-> Looking for a quick way to get started with JetBot?  Many third party kits are [now available](../../wiki/third-party-kits)!
+<img src="https://www.vstone.co.jp/products/wheelrobot/img/jetbot_01.jpg" height="256">
 
-<img src="../..//wiki/images/jetson-jetbot-illustration_1600x1260.png" height="256">
+環境構築、動作方法については下記のJetBotのwikiに従ってください。  
+[JetBot Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)  
 
-JetBot is an open-source robot based on NVIDIA Jetson Nano that is
+ただし、下記の２点については変更が必要です。  
+* Software setupのStep 5、項目4について  
+ プログラムはJetBot Mega用の物を使用する必要があるため、gitのコマンドを下記のように修正してください。
+ ```
+ $ git clone https://github.com/vstoneofficial/jetbot-mega
+ ```
+* Software setupのStep 5、項目5について  
+ rsyncコマンドは、下記のようにrオプションを追加して実行してください。
+ ```
+ $ rsync -r /jetbot/notebook ~/Notebooks  
+ ```
 
-* **Affordable** - Less than $150 add-on to Jetson Nano
-* **Educational** - Tutorials from basic motion to AI based collision avoidance
-* **Fun!** - Interactively programmed from your web browser
-
-Building and using JetBot gives the hands on experience needed to create entirely new AI projects.
-
-To get started, read the [JetBot Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki).
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-135919510-1/jetbot/README?pixel)](https://github.com/igrigorik/ga-beacon)
+なお、このプログラムはメガローバーVer.2.1用になります。  
+メガローバーVer.2.0で使用する場合、Arduinoライブラリおよびサンプルスケッチmegarover_commonの改造が必要となります。  
+改造する場合はメガローバーVer.2.1用のライブラリ、サンプルスケッチを参考にしてください。  
+ただし、具体的な改造方法についてはサポートの対象外とさせて頂いております。何卒ご了承ください。
