@@ -1,7 +1,7 @@
 # JetBot Mega
 
 Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクトです。  
-基本的な使用方法は通常のJetBotと同様ですが、ドライバー等のプログラムがVS-WRC051仕様になっています。  
+基本的な使用方法は通常のJetBotと同様ですが、ドライバー等のプログラムがVS-WRC021仕様になっています。  
 
 <img src="https://www.vstone.co.jp/products/wheelrobot/img/jetbot_01.jpg" height="256">
 
@@ -12,12 +12,12 @@ Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクト�
 * Software setupのStep 5、項目4について  
  プログラムはJetBot Mega用の物を使用する必要があるため、gitのコマンドを下記のように修正してください。
  ```
- $ git clone https://github.com/vstoneofficial/jetbot-mega.git
+ $ git clone https://github.com/vstoneofficial/jetbot-mega.git jetbot
  ```
 * Software setupのStep 5、項目5について  
  rsyncコマンドは、下記のようにrオプションを追加して実行してください。
  ```
- $ rsync -r /jetbot/notebook ~/Notebooks  
+ $ rsync -r /jetbot/notebooks ~/Notebooks  
  ```
 
 なお、このプログラムはメガローバーVer.2.1用になります。  
