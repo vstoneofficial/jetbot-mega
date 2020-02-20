@@ -18,7 +18,7 @@ Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクト�
 * Software setupのStep 5、項目5について  
  rsyncコマンドは、下記のようにrオプションを追加して実行してください。
  ```
- $ rsync -r /jetbot/notebooks ~/Notebooks  
+ $ rsync -r jetbot/notebooks ~/Notebooks  
  ```
 
 なお、このプログラムはメガローバーVer.2.1用になります。  
