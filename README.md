@@ -8,7 +8,6 @@ Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクト�
 環境構築、動作方法については下記のJetBotのwikiに従ってください。  
 [JetBot Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)  
 
-ただし、使用するOSイメージは、[jetbot_image_v0p3p2.zip](https://drive.google.com/file/d/1GF2D814hkViwluZ5SgNKW56cQu_5Ekt5/view)を使用してください。  
 また、下記の２点についてはコマンドに変更が必要です。  
 * Software setupのStep 5、項目4について  
  プログラムはJetBot Mega用の物を使用する必要があるため、gitのコマンドを下記のように修正してください。
