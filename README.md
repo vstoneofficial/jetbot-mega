@@ -1,7 +1,7 @@
 # JetBot Mega
 
 Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクトです。  
-基本的な使用方法は通常のJetBotと同様ですが、ドライバー等のプログラムがVS-WRC021仕様になっています。  
+基本的な使用方法は通常のJetBotと同様ですが、ドライバー等のプログラムがVS-WRC051仕様になっています。  
 
 <img src="https://www.vstone.co.jp/products/wheelrobot/img/jetbot_01.jpg" height="256">
 
@@ -19,6 +19,12 @@ Jetson nano搭載のメガローバー「JetBot Mega」用のプロジェクト�
  ```
  $ rsync -r jetbot/notebooks ~/Notebooks  
  ```
+
+また、必須ではありませんが下記のコマンドを使用して、  
+Jetson Nanoパフォーマンスの最大化を行うことをお勧めします。  
+```
+sudo nvpmodel -m 0
+```
 
 なお、このプログラムはメガローバーVer.2.1用になります。  
 メガローバーVer.2.0で使用する場合、Arduinoライブラリおよびサンプルスケッチmegarover_commonの改造が必要となります。  
